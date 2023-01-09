@@ -542,7 +542,7 @@ var removed=0
         var premium = new discord.MessageEmbed()
           .setTitle(":crown: You just found a premium feature!")
           .setDescription("We appreciate your interest in our services, but development isn't free. Please consider purchasing any subscription tier in order to use this command.")
-          .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+          .setFooter("ETB | Embedded77")
 
           .setColor("#ffc0cb")
         expressapp.listen((process.env.PORT || 8060), () => {
@@ -790,7 +790,7 @@ i.addField("Queue", trade_queue.length+" trade",false)
 }
 i.setTitle("Trade Sending")
       .setDescription("Will return trade sent or an error message")
-      .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+      .setFooter("ETB | Embedded77")
 
 clog(chalk.green("Trade found with "+a[3]+" ("+a[2]+")"))
 //fs.appendFileSync('.log',"\n"+moment().format("MM ddd, YYYY hh:mm:ss a")+" => "+"Trade found with "+a[3]+" ("+a[2]+")");
@@ -1494,7 +1494,7 @@ break;
                 if(args[1]){
                 message.reply("creating...")
                 var em=new discord.MessageEmbed()
-                .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                .setFooter("ETB | Embedded77")
 .setTitle("Here's the result!")
 .setColor("#ffc0cb")
 var str="Items tried on:"
@@ -1571,7 +1571,7 @@ fetch(`https://avatar.roblox.com/v1/try-on/2d?width=420&height=420&format=jpg&ad
 
                   var em=new discord.MessageEmbed()
                     if(data[yesid+""]){
-em.setFooter("Embedded77#1367 | https://discord.gg/qYhbqG9Jz7")
+em.setFooter("ETB | https://discord.gg/qYhbqG9Jz7")
                                               em.setAuthor(itemdata[yesid][0],
                         "https://www.roblox.com/thumbs/asset.ashx?width=420&height=420&assetid=" + yesid)
     .setColor("#ffc0cb")
@@ -1587,7 +1587,7 @@ em.setFooter("Embedded77#1367 | https://discord.gg/qYhbqG9Jz7")
     }
     message.reply(em)
                     }else{
-                                          em.setFooter("Embedded77#1367 | https://discord.gg/qYhbqG9Jz7")
+                                          em.setFooter("ETB | https://discord.gg/qYhbqG9Jz7")
                                               em.setAuthor(itemdata[yesid][0],
                         "https://www.roblox.com/thumbs/asset.ashx?width=420&height=420&assetid=" + yesid)
 
@@ -1600,7 +1600,7 @@ em.setFooter("Embedded77#1367 | https://discord.gg/qYhbqG9Jz7")
                 }else{
 
                   var em=new discord.MessageEmbed()
-                      .setFooter("Embedded77#1367 | https://discord.gg/qYhbqG9Jz7")
+                      .setFooter("ETB | https://discord.gg/qYhbqG9Jz7")
     .setColor("#ffc0cb")
     .setTitle("Not found")
     .setDescription("Could not find that item.")
@@ -1617,7 +1617,7 @@ break;
               case prefix + "help":
                 var em = new discord.MessageEmbed()
                   .setTitle("Commands")
-                  .setFooter("Embedded77#1367 | https://discord.gg/eZYUByBAZZ")
+                  .setFooter("ETB | https://discord.gg/eZYUByBAZZ")
                   .setDescription("The currently available commands.\nPremium ones require an embeddedtradebot subscription and are indicated by a :crown:\nSome commands are available for the bot owner only, and are marked by a :lock:")
                   .setColor("#ffc0cb")
                   .addField(`$userid`, "Fetches the userid of the given user.\n Example: `$userid Embedded77`", false)
@@ -1792,7 +1792,7 @@ break;
                                       .then((p) => {
                                         var e = new discord.MessageEmbed()
                                           .setFooter(
-                                            "Embedded77#1367 | https://discord.gg/eZYUByBAZZ"
+                                            "ETB | https://discord.gg/eZYUByBAZZ"
                                           )
                                           .setTitle(p.displayName)
                                           .setURL(
@@ -2603,7 +2603,7 @@ return;
                               em.attachFiles(attachment)
                               em.setImage("attachment://created.jpg")
 
-                              em.setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                              em.setFooter("ETB | Embedded77")
 
                                 .setColor("#ffc0cb")
 
@@ -2757,7 +2757,7 @@ return;
                       var owners = JSON.parse(search.substring(search.indexOf(first) + first.length, search.indexOf(second)).replace(";", "").replace("=", "").replace("var", ''))
                       message.reply(`Scanning...`)
                       var em = new discord.MessageEmbed()
-                        .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                        .setFooter("ETB | Embedded77")
                         .setURL("https://www.rolimons.com/item/" + args[1])
                         .setColor("#ffc0cb")
                         .setThumbnail("https://www.roblox.com/thumbs/asset.ashx?width=420&height=420&assetid=" + itemdat["asset_id"])
@@ -2905,7 +2905,7 @@ return;
                     em.addField(`Best Price`, c(itemdata.best_price), true)
                     em.addField(`Premium/Total Copies`, c(itemdata.bc_copies) + "/" + c(itemdata.copies), true)
                     em.addField(`Hoarded`, `${((itemdata.hoarded_copies / itemdata.copies) * 100).toFixed(3)}% (${itemdata.hoarded_copies} Copies)`, true)
-                      .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                      .setFooter("ETB | Embedded77")
                       .setURL("https://www.rolimons.com/item/" + yesid)
                       .setColor("#ffc0cb")
                       .setThumbnail("https://www.roblox.com/thumbs/asset.ashx?width=420&height=420&assetid=" + yesid)
@@ -3059,7 +3059,7 @@ return;
                 setTimeout(function() {
                   var i = new discord.MessageEmbed()
                   i.setAuthor("UUC LIST")
-                    .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                    .setFooter("ETB | Embedded77")
                     .setDescription(hellow.substring(0, 2000))
                     .setColor("#ffc0cb")
 
@@ -3190,7 +3190,7 @@ return;
                                 .addField("Rolimons", "https://www.rolimons.com/player/" + a[2])
                                 .addField("Trade", "https://www.roblox.com/Trade/TradeWindow.aspx?TradePartnerID=" + a[2])
                                 .setTitle("SNIPE")
-                                .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                                .setFooter("ETB | Embedded77")
                                 .setURL("https://www.rolimons.com/tradead/" + a[0])
                                 .setDescription(desc)
                                 .setColor("#ffc0cb")
@@ -3881,7 +3881,7 @@ if(m.errors){
                   }))
                   .then((u) => {
                       var em=new discord.MessageEmbed()
-                           .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                           .setFooter("ETB | Embedded77")
                            .setDescription(JSON.stringify(m))
 .setTitle("Trade Successfully Sent")
           .setColor("#ffc0cb")
@@ -4054,7 +4054,7 @@ if(m.errors){
                     }}))
                   .then((u) => {
                       var em=new discord.MessageEmbed()
-                           .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                           .setFooter("ETB | Embedded77")
                            .setDescription(JSON.stringify(m))
 .setTitle("Trade Successfully Sent")
           .setColor("#ffc0cb")
@@ -4177,7 +4177,7 @@ outbound.push({"trade":trade,id:m.id})
               }}))
             .then((u) => {
                 var em=new discord.MessageEmbed()
-                     .setFooter("Embedded77#1367 | https://discord.gg/qcDQ7CCS88")
+                     .setFooter("ETB | Embedded77")
                      .setDescription(JSON.stringify(m))
 .setTitle("Trade Successfully Sent")
     .setColor("#ffc0cb")
