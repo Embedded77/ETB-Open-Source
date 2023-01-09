@@ -1117,6 +1117,11 @@ var toremove={}
                 }
               }
             })
+            Object.keys(projected).forEach(x=>{
+              if(!whitelisted_projected[x]){
+                DONOTTRADE[x.assetId]=true
+              }
+            })
             // clog(ida)
             inv=shuffle(ida)
 //console.log(inv.length)
@@ -1302,6 +1307,11 @@ var toremove={}
                 }
               }
             })
+            Object.keys(projected).forEach(x=>{
+              if(!whitelisted_projected[x]){
+                DONOTTRADE[x.assetId]=true
+              }
+            })
             // clog(ida)
             inv=shuffle(ida)
 //console.log(inv.length)
@@ -1381,6 +1391,11 @@ var toremove={}
                     }
                   }
                 })
+            Object.keys(projected).forEach(x=>{
+              if(!whitelisted_projected[x]){
+                DONOTTRADE[x.assetId]=true
+              }
+            })
                 // clog(ida)
                 inv=shuffle(ida).slice(0,6)
 
