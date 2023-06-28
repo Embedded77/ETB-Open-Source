@@ -44,10 +44,10 @@ var fetch = require(`node-fetch`)
 var token="hi"
 var inventorycombinations=[]
 var jsonconfig=require("./config.json")
-var onlyvaluedshit=jsonconfig.only_valued_shit
 var ignore_rap=jsonconfig.ignore_rap
 var downgrade=jsonconfig.downgrade
 var upgrade=jsonconfig.upgrade
+var onlyvalueditems=jsonconfig.onlyvalueditems
 var cantsendinterval=jsonconfig.cantsendinterval
 var proxies=jsonconfig.proxies
 var rap_diff_ratio=jsonconfig.rap_diff_ratio
@@ -71,8 +71,6 @@ var testmode = jsonconfig.testmode
 var custom_values = jsonconfig.custom_values
   accept_ratio=jsonconfig.accept_ratio
 var USER_ID = jsonconfig.USER_ID
-var plugger9000_enabled = jsonconfig.plugger9000_enabled
-var avoid_devpois_like_the_fucking_plague = jsonconfig.avoid_devpois_like_the_fucking_plague
 var stop_on_completed = jsonconfig.stop_on_completed
 var selfeval = jsonconfig.selfeval
 var ratio =jsonconfig.ratio
@@ -85,7 +83,6 @@ var DONOTGET = jsonconfig.DONOTGET
 var keep_images=jsonconfig.keep_images
 var DONOTTRADE =jsonconfig.DONOTTRADE
 var getridoffast = jsonconfig.getridoffast
-var fuckrares = jsonconfig.fuckrares
 var rewrite_to_end_if_ratelimited=jsonconfig.rewrite_to_end_if_ratelimited
 var upgrading_ratio = jsonconfig.upgrading_ratio
 var upgrading_max_ratio = jsonconfig.upgrading_max_ratio
@@ -335,7 +332,7 @@ function accept(id) {}
 
           })
           .catch(function(err) {
-            token = err.response.headers["x-csrf-token"] || "shitfart"
+            token = err.response.headers["x-csrf-token"] || ""
             if(autoregen){
             setInterval(function() {
               fetch("https://www.roblox.com/authentication/signoutfromallsessionsandreauthenticate", {
@@ -654,7 +651,7 @@ var finallast=0
                           no_rap_inv = inv
                         }
 //insert here
-var tradewiththisfuckinguser=undefined
+var has_traded=undefined
 var assets=[]
 var j=[]
 var giveassets=[]
@@ -697,7 +694,7 @@ truerap=truerap+rawitemdata[va.assetId][2]
 assets1.push(va.assetId)
 p1.push(va.userAssetId)
 get[va.assetId]=true
-if(rawitemdata[va.assetId][3]==-1 && onlyvaluedshit==true){
+if(rawitemdata[va.assetId][3]==-1 && onlyvalueditems==true){
 end=true
 }
 })
@@ -741,7 +738,7 @@ if(donotcontinue==false && sum<sum1*maxratio && sum>sum1*ratio && giveassets4.le
   if((Math.abs(truerap-truerap1)<rap_diff_ratio*truerap) || ignore_rap  ){
   if(already_pushed==false){
   }
-    if(tradewiththisfuckinguser==undefined){
+    if(has_traded==undefined){
     
     assets=giveassets4
     giveassets= giveassets1
@@ -749,7 +746,7 @@ if(donotcontinue==false && sum<sum1*maxratio && sum>sum1*ratio && giveassets4.le
     p=p1
     j=giveassets2
     
-  tradewiththisfuckinguser=true
+  has_traded=true
   }
   
   }
@@ -760,8 +757,8 @@ if(donotcontinue==false && sum<sum1*maxratio && sum>sum1*ratio && giveassets4.le
 }
 })
 var sendrobux=0
-//console.log(`${a[3]} ended with ${tradewiththisfuckinguser} ${already_pushed} ${assets.length} ${JSON.stringify(DONOTGET)}`)
-  if (tradewiththisfuckinguser && already_pushed == false) {
+//console.log(`${a[3]} ended with ${has_traded} ${already_pushed} ${assets.length} ${JSON.stringify(DONOTGET)}`)
+  if (has_traded && already_pushed == false) {
     var d = ""
     var z=[]
     var j=giveassets2
@@ -1452,7 +1449,7 @@ var removed=0
 
           var args = message.content.split(" ");
     if(message.author.bot==false && message.content.search("<@!693482849914847282>")>-1){
-      message.reply("Embedded needs the following before he can fix your problem\n**1.** Your config\n**2.** The .log file (dont worry, its just a log of any error messages/console outputs theres no cookies/shit in there)\n**3.** A clear description of the issue. A screenshot helps.\n\nEmbedded should ONLY be asked for support from if the staff can't solve it, or it's an issue which affects many users.\n<#775362538287923220>")
+      message.reply("Embedded needs the following before he can fix your problem\n**1.** Your config\n**2.** The .log file (dont worry, its just a log of any error messages/console outputs theres no sensitive data in there)\n**3.** A clear description of the issue. A screenshot helps.\n\nEmbedded should ONLY be asked for support from if the staff can't solve it, or it's an issue which affects many users.\n<#775362538287923220>")
     }
           if (message.channel.id == "775142698998562836" && message.attachments.first()) {
             message.react("✅")
@@ -1498,13 +1495,6 @@ var removed=0
             switch (args[0]) {
             case prefix+"stats":
 break;
-              case prefix+"kys":
-                if (message.author.id == DISCORD_ID) {
-                  message.reply("terminating bot.")
-                  process.exit()
-                }
-              break;
-
               case prefix+"sandbox":
                 if(args[1]){
                 message.reply("creating...")
@@ -3261,8 +3251,7 @@ return;
           }
 
         })
-        avoid_devpois_like_the_fucking_plague = avoid_devpois_like_the_fucking_plague
-        plugger9000_enabled = plugger9000_enabled
+
         /*
         setTimeout(function() {
   var cached={}
