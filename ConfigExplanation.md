@@ -113,13 +113,6 @@
  #### USER_ID
  ###### Your roblox userid
 ⠀
-#### plugger9000_enabled
-###### Plugger9000 is an automated plugging device which activates when an item above 100k or a rare has been traded. If it dects a comp, it will send a lowball based on your ratios. 
-⠀
-#### avoid_devpois_like_the_fucking_plague
-###### If this is set to true, the plugger9000 will not touch the pois items of anyone who owns a group above 100k or a game with 1m visits
-
-⠀
 #### stop_on_completed
 ###### If this is enabled, the bot will stop itself when a trade is completed
 ⠀
@@ -162,9 +155,6 @@
 ⠀
 #### getridoffast
 ###### This setting follows the same format as DONOTGET. These are the itemids of items you **ONLY** want the bot to trade
-⠀
-#### fuckrares
-###### If this is set to true it wont trade for any rares
 ⠀
 #### rewrite_to_end_if_ratelimited
 ###### If a trade cannot be sent due to ratelimits, it will automatically add it to the end of the queue. Note, if one trade ratelimits, the bot automatically delays the sending of the next one
